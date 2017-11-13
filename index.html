@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Presentation to Data Fest Tbilsis">
+<meta name="author" content="Michael Crawford">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<!-- Basic reveal.js theming -->
+<link rel="stylesheet" href="assets/reveal.js/css/reveal.css">
+
+<!--  Custom theming -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="assets/reveal.js/css/theme/custom_black.css" id="theme">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="assets/reveal.js/lib/css/zenburn.css">
+
+<title>How to Set Up a Data Science Function</title>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'assets/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+</script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section class="center" data-background="assets/img/city.jpg">
+        </section>
+
+        <section class="center" data-background="assets/img/city.jpg" data-state="dim">
+            <h1>How to Set Up a data science function in your business without spending $1,000,000</h1>
+        </section>
+
+        <section class="center">
+            <h1>Who am I?</h1>
+            <p><br></p>
+            <h1 class="fragment">Michael Crawford</h1>
+            <p class="fragment">&amp;</p>
+            <h1 class="fragment">I am a data scientist!</h1>
+        </section>
+
+        <section class="center">
+            <h1>How did I get here?</h1>
+            <h3 class="fragment">It's been quite a journey</h3>
+            <ul>
+                <li class="fragment"><h4>I trained as an actuary</h4></li>
+                <li class="fragment"><h4>In my mid-twenties I took a detour into tech</h4></li>
+                <li class="fragment"><h4>I wrote software &amp; managed projects</h4></li>
+                <li class="fragment"><h4>I kept learning languages &amp; techniques - for fun!</h4></li>
+                <li class="fragment"><h4>5 years ago found machine learning - more fun!</h4></li>
+            </ul>
+            <h3 class="fragment">This evolved into my current job</h3>
+        </section>
+
+        <section class="center">
+            <h1>So you want to Data Science!</h1>
+        </section>
+
+        <section class="center">
+            <h1>What typically happens?</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/pointyheadedboss.png">
+        </section>
+
+        <section data-background="assets/img/missioncontrol.jpg">
+            <h1>What they want</h1>
+        </section>
+
+        <section data-background="assets/img/BaconStudio.jpg">
+            <h1>What they get</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/BanskyElephant.jpg">
+            <h1>Awkward Questions</h1>
+        </section>
+
+        <section data-background-video="assets/img/sideshowbob.mp4" data-background-video-loop data-background-video-muted>
+            <h1>Why am I talking to you?</h1>
+        </section>
+
+        <section class="center">
+            <h2>So how do you set up a data science function?</h2>
+            <ul>
+                <li class="fragment"><h4>without spending a fortune</h4></li>
+                <li class="fragment"><h4>Low risk</h4></li>
+                <li class="fragment"><h4>Adds value to the business</h4></li>
+            </ul>
+            <p><br></p>
+            <h2 class="fragment">But most importantly</h4>
+            <p><br></p>
+            <h2 class="fragment">Without getting fired</h4>
+        </section>
+
+        <section class="center" data-background="assets/img/I-Dont-Know.png">
+        </section>
+
+        <section class="center" data-background="assets/img/not-entirely-true-to-gandalf.jpg" data-state="dim">
+            <h1>That's not entirely true!</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="extradim">
+            <h1>Requirement 1</h1>
+            <h2>Needs to be business driven</h2>
+            <ul>
+                <li class="fragment"><h4>Data used to solve real business problems</h4></li>
+                <li class="fragment"><h4>Save money</h4></li>
+                <li class="fragment"><h4>Make Money</h4></li>
+                <li class="fragment"><h4>Identify new markets &amp; products</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="extradim">
+            <h1>Anti-Pattens</h1>
+            <h2>Your boss...</h2>
+            <ul>
+                <li class="fragment"><h4>just read an article on Machine Learning</h4></li>
+                <li class="fragment"><h4>heard "data is the new oil"</h4></li>
+                <li class="fragment"><h4>went to a conference with "tech" in title</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="">
+            <h1>Requirement 2</h1>
+            <h2>Strong Corporate Sponsor</h2>
+            <ul>
+                <li class="fragment"><h4>Project has to be lead by senior board member</h4></li>
+                <li class="fragment"><h4>CEO / COO - operational role preferable</h4></li>
+                <li class="fragment"><h4>They will provide cover &amp; run interference</h4></li>
+                <li class="fragment"><h4>You need an open &amp; honest relationship with them</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="dim">
+            <h1>Anti-Pattens</h1>
+            <h2>Beware!</h2>
+            <ul>
+                <li class="fragment"><h4>CIO lead - tends to be too tech focused</h4></li>
+                <li class="fragment"><h4>CDO lead - data governance &amp; compliance</h4></li>
+                <li class="fragment"><h4>CFO lead - justifing ROI hard</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="">
+            <h1>Requirement 3</h1>
+            <h2>Start Small</h2>
+            <ul>
+                <li class="fragment"><h4>Agile, small, focused</h4></li>
+                <li class="fragment"><h4>2 - 6 high quality people</h4></li>
+                <li class="fragment"><h4>pragmatic, generalists, creative</h4></li>
+                <li class="fragment"><h4>deep business domain knowledge essential</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="dim">
+            <h1>Anti-Pattens</h1>
+            <h2>This actually happens</h2>
+            <ul>
+                <li class="fragment"><h4>I need to hire 50 data scientists now!</h4></li>
+                <li class="fragment"><h4>Wait for a year - you have spent $1,000,000</h4></li>
+                <li class="fragment"><h4>I call this "The Walking Dead"</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="">
+            <h1>Requirement 4</h1>
+            <h2>Use the best tools - i.e. FOSS</h2>
+            <ul>
+                <li class="fragment"><h4>Still an issue with companies</h4></li>
+                <li class="fragment"><h4>The ability to try new tools is really important</h4></li>
+                <li class="fragment"><h4>Fight hard for this</h4></li>
+                <li class="fragment"><h4>We write a "Manifesto" fait accompli</h4></li>
+                <li class="fragment"><h4>Benovelent IT</h4></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/" data-state="dim">
+            <h1>Anti-Pattens</h1>
+            <h2>We've all been here</h2>
+            <ul>
+                <li class="fragment"><h4>Locked down Windows PC</h4></li>
+                <li class="fragment"><h4>Can't install any software</h4></li>
+                <li class="fragment"><h4>takes weeks for IT to do anything</h4></li>
+                <li class="fragment"><h4>Get out now while you still can</h4></li>
+            </ul>
+        </section>
+
+
+
+        <section data-background="assets/img/istock_lloyds1_newgradient.jpg" data-state="dim" data-transition="convex">
+            <h1>So what is Data Science?</h1>
+            <p><br></p>
+            <h5 class="fragment">Data science is an evolutionary step in interdisciplinary fields incorporating business analysis, computer science, modelling, statistics, analytics and mathematics.</h5>
+            <p><br></p>
+            <h5 class="fragment">That's quite a mouthfull!</h5>
+            <h3 class="fragment">In short - we use computers...</h3>
+        </section>
+
+        <section class="center" data-background="assets/img/ibm-360.jpg" data-background-transition="fade">
+            <h1 style="position: absolute; top:1000%; right: 0%; font-weight: bold;">A Lot!</h1>
+        </section>
+
+        <section data-background="assets/img/datasciencehype.jpg" data-background-transition="convex">
+            <h1 style="text-align: left;"><b>Data Science</b></h1>
+            <div class="fragment">
+                <h1 style="text-align: left;"><b>why</b></h1>
+                <h1 style="text-align: left;"><b>all the</b></h1>
+                <h1 style="text-align: left;"><b><font color="black">Hype?</font></b></h1>
+            </div>
+        </section>
+
+        <section>
+            <img src="assets/img/GoogleChiefEconomist.png"/>
+        </section>
+
+        <section data-background="assets/img/HBRSexy.png" data-background-transition="convex">
+        </section>
+
+        <section>
+            <h1>How did this happen?</h1>
+            <h3 class="fragment">Warning: Inspirational Quote Ahead</h3>
+            <a href="https://en.wikipedia.org/wiki/Eddie_Cantor" target="_blank">
+                <img class="fragment" src="assets/img/overnightsucess.jpg"/>
+            </a>
+            <h3 class="fragment">In reality it's as old as computer science</h3>
+        </section>
+
+        <section>
+            <h2>A Short History of Data Science</h2>
+                <h5 class="fragment">Mostly the story of the coupling of the mature discipline of statistics...</h5>
+                <h5 class="fragment">...With a very young one – computer science</h5>
+                <aside class="notes">
+                    Starting around the 1960's &amp; limited solely to academia.
+                </aside>
+                <h5 class="fragment">Theoretical progress ran ahead of computing power</h5>
+                <h5 class="fragment">Computing is now cheap, powerful &amp; ubiquitous</h5>
+                <h5 class="fragment">The rise of the Internet and Open Source also helped
+               </h5>
+            <p><br></p>
+            <h5 class="fragment">These factors have coalesced into a big ball of <font color="red">happiness</font></h5>
+        </section>
+
+        <section data-background="assets/img/wall-e_keyboard.jpg" data-state="dim" data-background-transition="convex">
+            <h2><font><b>We can easily learn from data</b></font></h2>
+            <div>
+                <h2 class="fragment">Extract information</h2>
+                <h2 class="fragment">Train models to predict outcomes</h2>
+                <h2 class="fragment">Discover correlations</h2>
+                <h2 class="fragment">Match patterns of behavior</h2>
+                <h2 class="fragment">Run businesses more effectively</h2>
+            </div>
+        </section>
+
+        <section data-transition="none">
+            <h2>How is this going to affect me?</h2>
+            <p><br></p>
+            <h5 class="fragment">Over my career the only constant has been change</h5>
+            <p><br></p>
+            <h5 class="fragment">The pace of technological change is astounding</h5>
+        </section>
+
+        <section data-state="extradim" data-background="assets/img/phone.jpg" data-transition="none">
+            <h2>How is this going to affect me?</h2>
+            <p><br></p>
+            <h5>Over my career the only constant has been change</h5>
+            <p><br></p>
+            <h5>The pace of technological change is astounding</h5>
+            <p><br></p>
+            <h5 class="fragment">What's not going to happen</h5>
+            <p><br></p>
+            <h1 class="fragment">Nothing</h1>
+        </section>
+
+        <section>
+            <h2>Applications to Finance</h2>
+            <ul>
+                <li><h5><a href="#/15">Product Pricing</a></h5></li>
+                <li><h5><a href="#/16">Underwriting</a></h5></li>
+                <li><h5><a href="#/17">Fraud</a></h5></li>
+                <li><h5><a href="#/19">Customer Acquisition &amp; Retention</a></h5></li>
+                <li><h5><a href="#/21">Operations</a></h5></li>
+                <li><h5><a href="#/23">Capital Management</a></h5></li>
+                <li><h5><a href="#/24">Regulation</a></h5></li>
+            </ul>
+            <h2 class="fragment">So pretty much everywhere</h2>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Product Pricing</a></h2>
+            <ul>
+                <li><h5>In GI GLM's are used to price products</h5></li>
+                <li><h5>The process can be involved and subjective</h5></li>
+                <li><h5>We can use machine learning techniques to:</h5></li>
+                    <ul>
+                        <li><p>Identify important features</p></li>
+                        <li><p>Systematically validate and rank models</p></li>
+                    </ul>
+                <li><h5>This speeds up the modelling process</h5></li>
+                <li><h5>Allows cheap and easy experimentation</h5></li>
+                <li><h5>External data sources can be evaluated easily</h5></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Underwriting</a></h2>
+            <ul>
+                <li><h5>Underwriting is the process of evaluating risk</h5></li>
+                <li><h5>Needs skill &amp; judgement - takes time to acquire</h5></li>
+                <li><h5>The process has:</h5></li>
+                    <ul>
+                        <li><p>Multiple conflicts of interest</p></li>
+                        <li><p>Mistrust and dishonesty are built-in</p></li>
+                        <li><p>Lots &amp; lots of quantitative &amp; qualitative data</p></li>
+                    </ul>
+                <li><h5>Underwriting is the poster child for Data Analytics</h5></li>
+                <li><h5>Underwriting jobs will not exist in 10 years*</h5></li>
+            </ul>
+            <p>*my personal opinion</p>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Fraud</a></h2>
+            <h4>Fraud can happen at a lot of stages</h4>
+            <ul>
+                <li><h5>At application</h5></li>
+                <li><h5>During underwriting</h5></li>
+                <li><h5>When a claim is made or during a claim</h5></li>
+                <li><h5>Machine Learning is great at spotting:</h5></li>
+                <ul>
+                    <li><p>Unusual features</p></li>
+                    <li><p>and/or connections in:</p></li>
+                    <ul>
+                        <li><p>High Dimensional Data</p></li>
+                        <li><p>Large Amounts of unstructured data</p></li>
+                    </ul>
+                </ul>
+            </ul>
+        </section>
+
+        <section data-background="assets/img/LemonadeHome.png" data-background-transition="convex">
+            <span class="fragment fade-left">
+            <img  src="assets/img/Lemonade.png"/>
+            <p><font color="black">Have recently hired world-famous behavioural economist Prof. Dan Ariely</font></p></span>
+            <p><font size="2" color="black">
+                "if you set out to design a system to bring out the very worst in
+                people - a system that is anonymous, adversarial, win-lose, opaque and indifferent
+                - you would end up with something unnervingly like an insurance company."
+            </font></p>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Customer Acquisition &amp; Retention</a></h2>
+            <ul>
+                <li><h5>This is an area where retailers already excel</h5></li>
+                <li><h5>Data analytics used to get to know their customers</h5></li>
+                <li><h5>We have used machine learning techniques to:</h5>
+                    <ul>
+                        <li>Identify potential customers</li>
+                        <li>Segment customers into archetypes</li>
+                        <li>Identify the causes of lapse</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/census.png" data-background-transition="convex">
+            <h2>Irish 2011 Census Data</h2>
+            <h2>Clustered using machine learning</h2>
+            <h2>Reveals amazing information</h2>
+            <h2>About the socioeconomic make up of Ireland</h2>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Operations</a></h2>
+            <ul>
+                <li><h5>Track information flows around an organisation</h5></li>
+                <li><h5>Predict peaks and troughs in business</h5></li>
+                <li><h5>Allocate scarce resources sensibly</h5></li>
+                <li><h5>Analyse internal &amp; external sentiment</h5></li>
+                <li><h5>Improve business processes</h5></li>
+            </ul>
+        </section>
+
+        <section class="center" data-background="assets/img/email.png" data-background-transition="convex">
+            <h2><font color="black"><b>If you map the flow of emails</b></font></h2>
+            <h2><font color="black"><b>Around your organisation</b></font></h2>
+            <h2><font color="black"><b>It's easy to be surprised</b></font></h2>
+            <h2><font color="black"><b>by what you find</b></font></h2>
+            <h2><font color="black"><b>Your narrative will not match</b></font></h2>
+            <h2><font color="black"><b>Reality!</b></font></h2>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Capital Management</a></h2>
+            <ul>
+                <li><h5>Solvency II implemented in January 2016</h5></li>
+                <li><h5>Model based approach - lots of parameters to estimate</h5></li>
+                <li><h5>The more information you can extract from your data:</h5>
+                    <ul>
+                        <li>The more appropriate your risk parameters will be</li>
+                        <li>A better understanding of risk can reduce its volatility</li>
+                        <li>In turn this can decrease capital requirements</li>
+                    </ul>
+                </li>
+                <li><h5>A small reduction in volatility can have a big effect on capital requirements</h5></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><a href="#/14">Regulation</a></h2>
+            <ul>
+                <li><h5>Regulation is a huge cost for financial companies</h5></li>
+                <li><h5>Breaches have a financial &amp; reputational cost</h5></li>
+                <li><h5>We can use machine learning techniques to identify:</h5>
+                    <ul>
+                        <li>Anomalies in data that suggest things are going wrong</li>
+                        <li>Highlight increased operational risk</li>
+                    </ul>
+                </li>
+                <li><h5>Machine learning can be used to interpret:</h5>
+                    <ul>
+                        <li>Reams of legislation and rules</li>
+                        <li>Aide compliance with regulations</li>
+                    </ul>
+                </li>
+                <li><h5>CBI &amp; FCA looking at using data analysis and ML</h5></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Applications to Finance</h2>
+            <ul>
+                <li><h5><a href="#/15">Product Pricing</a></h5></li>
+                <li><h5><a href="#/16">Underwriting</a></h5></li>
+                <li><h5><a href="#/17">Fraud</a></h5></li>
+                <li><h5><a href="#/19">Customer Acquisition &amp; Retention</a></h5></li>
+                <li><h5><a href="#/21">Operations</a></h5></li>
+                <li><h5><a href="#/23">Capital Management</a></h5></li>
+                <li><h5><a href="#/24">Regulation</a></h5></li>
+            </ul>
+            <h2>So pretty much everywhere</h2>
+        </section>
+
+        <section data-background="assets/img/ParksAndRec.gif" data-background-transition="convex">
+            <h2>I'm sold - Where do I sign?</h2>
+        </section>
+
+        <section data-transition="none">
+            <h2>I'm sold - Where do I sign?</h2>
+            <h3>Not so Fast!</h3>
+            <ul>
+                <li ><h5 class="fragment">Learn to code fluently in modern languages</h5></li>
+                    <ul>
+                        <li class="fragment"><a href="https://www.continuum.io/downloads">Python - we use Anaconda</a></li>
+                        <li class="fragment">R &amp; RStudio<span class="fragment"> - Hadleyverse</span></li>
+                        <li class="fragment"><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/">Computer Science</a></li>
+                    </ul>
+                <li><h5 class="fragment">Learn a lot of maths</h5></li>
+                    <ul>
+                        <li class="fragment"><a href="http://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">Statistics</a></li>
+                        <li class="fragment"><a href="https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8">Linear Algebra</a></li>
+                        <li class="fragment"><a href="https://www.youtube.com/course?list=ECF688ECB2FF119649">Mathematical Physics</a></li>
+                    </ul>
+            </ul>
+        </section>
+
+        <section data-transition="none" data-background="assets/img/geocode.png">
+            <h2>I'm sold - Where do I sign?</h2>
+            <h3>Not so Fast!</h3>
+            <ul>
+                <li ><h5>Learn to code fluently in modern languages</h5></li>
+                    <ul>
+                        <li><a href="https://www.continuum.io/downloads">Python - we use Anaconda</a></li>
+                        <li>R &amp; RStudio - Hadleyverse</li>
+                        <li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/">Computer Science</a></li>
+                    </ul>
+                <li><h5>Learn a lot of maths</h5></li>
+                    <ul>
+                        <li><a href="http://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">Statistics</a></li>
+                        <li><a href="http://mirror.mit-ocw.sbu.ac.ir/courses/mathematics/18-06-linear-algebra-spring-2010/">Linear Algebra</a></li>
+                        <li><a href="http://mirror.mit-ocw.sbu.ac.ir/courses/physics/8-01sc-physics-i-classical-mechanics-fall-2010/">Mathematical Physics</a></li>
+                    </ul>
+                <li><h5><a href="https://d3js.org/">Don't be afraid of visualisation</a></h5></li>
+            </ul>
+        </section>
+
+        <!--<section class="center" data-background="assets/img/insurance_1600x1000.jpg" data-state="extradim">
+            <h1>In Summary</h1>
+            <h3>Data science is applicable throughout the Insurance industry</h3>
+        </section>
+
+        <section class="center" data-background="assets/img/tools.jpg" data-state="dim">
+            <h1>The tools are powerful and largely free</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/tools.jpg" data-state="dim">
+            <h1>There's a wealth of information already inside the business</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/tools.jpg" data-state="dim">
+            <h1>High quality external data is readily available</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/1927SolvayColour.jpg">
+            <h1>Spend money on the team</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/1927SolvayColour.jpg">
+            <h1>Enable them to hone &amp; share skills &amp; expertise</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="dim">
+            <h1>Plough insights back into the business</h1>
+        </section>
+
+        <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="dim">
+            <h1>And incorporate data science throughout</h1>
+        </section>
+        -->
+        <section>
+            <h2>Some Examples</h2>
+            <ul>
+                <li><h5><a href="http://localhost/carins" target="_blank">Interactive Dashboards</a></h5></li>
+                <li><h5><a href="http://localhost/sam_ppr" target="">Using External Census Data</a></h5></li>
+                <li><h5><a href="http://localhost/dash" target="_blank">Using the above for profit</a></h5></li>
+                <li><h5><a href="http://127.0.0.1:6856/">Quick Calcs Applications</a></h5></li>
+            </ul>
+        </section>
+
+        <section>
+            <h1><b>Questions?</b></h1>
+            <p><b>Nah, we're running outta time. Seriously.</b></p>
+            <p><br></p>
+            <p><br></p>
+            <h1><b>Thanks For Listening</b></h1>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="assets/reveal.js/lib/js/head.min.js"></script>
+<script src="assets/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: false,
+    slideNumber: false,
+    hideAddressBar: true,
+    previewLinks: true,
+    showNotes: false,
+    transition: 'convex', // none/fade/slide/convex/concave/zoom
+    backgroundTransition: 'default',
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // when the presentation is scaled to fit different resolutions. Can be
+    // specified using percentage units.
+    width: 1160,
+    height: 720,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 1.5,
+
+    // Optional reveal.js plugins
+    dependencies: [
+        {
+            src: 'assets/reveal.js/lib/js/classList.js',
+            condition: function () {
+                return !document.body.classList;
+            }
+        },
+        {
+            src: 'assets/reveal.js/plugin/markdown/marked.js',
+            condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+        },
+        {
+            src: 'assets/reveal.js/plugin/markdown/markdown.js',
+            condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+        },
+        {
+            src: 'assets/reveal.js/plugin/highlight/highlight.js',
+            async: true,
+            callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+        },
+        {
+            src: 'assets/reveal.js/plugin/zoom-js/zoom.js',
+            async: true
+        },
+        {
+            src: 'assets/reveal.js/plugin/notes/notes.js',
+            async: true
+        }
+	]
+});
+</script>
+</body>
+</html>

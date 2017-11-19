@@ -2,40 +2,38 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta name="description" content="Presentation to Data Fest Tbilsis">
-<meta name="author" content="Michael Crawford">
+    <meta charset="utf-8">
+    <meta name="description" content="Presentation to Data Fest Tbilsis">
+    <meta name="author" content="Michael Crawford">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Basic reveal.js theming -->
+    <link rel="stylesheet" href="assets/reveal.js/css/reveal.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!--  Custom theming -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/reveal.js/css/theme/custom_black.css" id="theme">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-<!-- Basic reveal.js theming -->
-<link rel="stylesheet" href="assets/reveal.js/css/reveal.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="assets/reveal.js/lib/css/zenburn.css">
 
-<!--  Custom theming -->
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="assets/reveal.js/css/theme/custom_black.css" id="theme">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/custom.css">
+    <title>How to Set Up a Data Science Function</title>
 
-<!-- Code syntax highlighting -->
-<link rel="stylesheet" href="assets/reveal.js/lib/css/zenburn.css">
-
-<title>How to Set Up a Data Science Function</title>
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'assets/reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'assets/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
 
     <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -43,75 +41,83 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 </head>
 
 <body>
-<div class="reveal">
+    <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
 
-        <section class="center" data-background="assets/img/city.jpg">
-        </section>
+            <section class="center" data-background="assets/img/city.jpg">
+            </section>
 
-        <section class="center" data-background="assets/img/city.jpg" data-state="dim">
-            <h1>How to Set Up a data science function in your business without spending $1,000,000</h1>
-        </section>
+            <section class="center" data-background="assets/img/city.jpg" data-state="dim">
+                <h1>How to Set Up a data science function in your business without spending $1,000,000</h1>
+            </section>
 
-        <section class="center">
-            <h1>Who am I?</h1>
-            <p><br></p>
-            <h1 class="fragment">Michael Crawford</h1>
-            <p class="fragment">&amp;</p>
-            <h1 class="fragment">I am a data scientist!</h1>
-        </section>
+            <section class="center">
+                <h1>Who am I?</h1>
+                <p><br></p>
+                <h1 class="fragment">Michael Crawford</h1>
+                <p class="fragment">&amp;</p>
+                <h1 class="fragment">I am a data scientist!</h1>
+            </section>
 
-        <section class="center">
-            <h1>How did I get here?</h1>
-            <h3 class="fragment">It's been quite a journey</h3>
-            <ul>
-                <li class="fragment"><h4>I trained as an actuary</h4></li>
-                <li class="fragment"><h4>In my mid-twenties I took a detour into tech</h4></li>
-                <li class="fragment"><h4>I wrote software &amp; managed projects</h4></li>
-                <li class="fragment"><h4>I kept learning languages &amp; techniques - for fun!</h4></li>
-                <li class="fragment"><h4>5 years ago found machine learning - more fun!</h4></li>
-            </ul>
-            <h3 class="fragment">This evolved into my current job</h3>
-        </section>
+            <section class="center">
+                <h1>How did I get here?</h1>
+                <h3 class="fragment">It's been quite a journey</h3>
+                <ul>
+                    <li class="fragment">
+                        <h4>I trained as an actuary</h4></li>
+                    <li class="fragment">
+                        <h4>In my mid-twenties I took a detour into tech</h4></li>
+                    <li class="fragment">
+                        <h4>I wrote software &amp; managed projects</h4></li>
+                    <li class="fragment">
+                        <h4>I kept learning languages &amp; techniques - for fun!</h4></li>
+                    <li class="fragment">
+                        <h4>5 years ago found machine learning - more fun!</h4></li>
+                </ul>
+                <h3 class="fragment">This evolved into my current job</h3>
+            </section>
 
-        <section class="center">
-            <h1>So you want to Data Science!</h1>
-        </section>
+            <section class="center">
+                <h1>So you want to Data Science!</h1>
+            </section>
 
-        <section class="center">
-            <h1>What typically happens?</h1>
-        </section>
+            <section class="center">
+                <h1>What typically happens?</h1>
+            </section>
 
-        <section class="center" data-background="assets/img/pointyheadedboss.png">
-        </section>
+            <section class="center" data-background="assets/img/pointyheadedboss.png">
+            </section>
 
-        <section data-background="assets/img/missioncontrol.jpg">
-            <h1>What they want</h1>
-        </section>
+            <section data-background="assets/img/missioncontrol.jpg">
+                <h1>What they want</h1>
+            </section>
 
-        <section data-background="assets/img/BaconStudio.jpg">
-            <h1>What they get</h1>
-        </section>
+            <section data-background="assets/img/BaconStudio.jpg">
+                <h1>What they get</h1>
+            </section>
 
-        <section class="center" data-background="assets/img/BanskyElephant.jpg">
-            <h1>Awkward Questions</h1>
-        </section>
+            <section class="center" data-background="assets/img/BanskyElephant.jpg">
+                <h1>Awkward Questions</h1>
+            </section>
 
-        <section data-background-video="assets/img/sideshowbob.mp4" data-background-video-loop data-background-video-muted>
-            <h1>Why am I talking to you?</h1>
-        </section>
+            <section data-background-video="assets/img/sideshowbob.mp4" data-background-video-loop data-background-video-muted>
+                <h1>Why am I talking to you?</h1>
+            </section>
 
-        <section class="center">
-            <h2>So how do you set up a data science function?</h2>
-            <ul>
-                <li class="fragment"><h4>without spending a fortune</h4></li>
-                <li class="fragment"><h4>Low risk</h4></li>
-                <li class="fragment"><h4>Adds value to the business</h4></li>
-            </ul>
-            <p><br></p>
-            <h2 class="fragment">But most importantly</h4>
+            <section class="center">
+                <h2>So how do you set up a data science function?</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>without spending a fortune</h4></li>
+                    <li class="fragment">
+                        <h4>Low risk</h4></li>
+                    <li class="fragment">
+                        <h4>Adds value to the business</h4></li>
+                </ul>
+                <p><br></p>
+                <h2 class="fragment">But most importantly</h4>
             <p><br></p>
             <h2 class="fragment">Without getting fired</h4>
         </section>
@@ -126,208 +132,253 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="extradim">
             <h1>Requirement 1</h1>
             <h2>Needs to be business driven</h2>
-            <ul>
-                <li class="fragment"><h4>Data used to solve real business problems</h4></li>
-                <li class="fragment"><h4>Save money</h4></li>
-                <li class="fragment"><h4>Make Money</h4></li>
-                <li class="fragment"><h4>Identify new markets &amp; products</h4></li>
-            </ul>
-        </section>
+                <ul>
+                    <li class="fragment">
+                        <h4>Data used to solve real business problems</h4></li>
+                    <li class="fragment">
+                        <h4>Save money</h4></li>
+                    <li class="fragment">
+                        <h4>Make Money</h4></li>
+                    <li class="fragment">
+                        <h4>Identify new markets &amp; products</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="extradim">
-            <h1>Anti-patterns</h1>
-            <h2>Your boss...</h2>
-            <ul>
-                <li class="fragment"><h4>just read an article on Machine Learning</h4></li>
-                <li class="fragment"><h4>heard "data is the new oil"</h4></li>
-                <li class="fragment"><h4>went to a conference with "tech" in title</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/productivity_machine.jpg" data-state="extradim">
+                <h1>Anti-patterns</h1>
+                <h2>Your boss...</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>just read an article on Machine Learning</h4></li>
+                    <li class="fragment">
+                        <h4>heard "data is the new oil"</h4></li>
+                    <li class="fragment">
+                        <h4>went to a conference with "tech" in title</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/boardroom.jpg" data-state="extradim">
-            <h1>Requirement 2</h1>
-            <h2>Strong Corporate Sponsor</h2>
-            <ul>
-                <li class="fragment"><h4>Project has to be lead by senior board member</h4></li>
-                <li class="fragment"><h4>CEO / COO - operational role preferable</h4></li>
-                <li class="fragment"><h4>They will provide cover &amp; run interference</h4></li>
-                <li class="fragment"><h4>You need an open &amp; honest relationship with them</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/boardroom.jpg" data-state="extradim">
+                <h1>Requirement 2</h1>
+                <h2>Strong Corporate Sponsor</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Project has to be lead by senior board member</h4></li>
+                    <li class="fragment">
+                        <h4>CEO / COO - operational role preferable</h4></li>
+                    <li class="fragment">
+                        <h4>They will provide cover &amp; run interference</h4></li>
+                    <li class="fragment">
+                        <h4>You need an open &amp; honest relationship with them</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/boardroom.jpg" data-state="extradim">
-            <h1>Anti-patterns</h1>
-            <h2>Beware!</h2>
-            <ul>
-                <li class="fragment"><h4>CIO lead - tends to be too tech focused</h4></li>
-                <li class="fragment"><h4>CDO lead - data governance &amp; compliance</h4></li>
-                <li class="fragment"><h4>CFO lead - justifing ROI hard</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/boardroom.jpg" data-state="extradim">
+                <h1>Anti-patterns</h1>
+                <h2>Beware!</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>CIO lead - tends to be too tech focused</h4></li>
+                    <li class="fragment">
+                        <h4>CDO lead - data governance &amp; compliance</h4></li>
+                    <li class="fragment">
+                        <h4>CFO lead - justifing ROI hard</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/1927SolvayColour.jpg" data-state="dim">
-            <h1>Requirement 3</h1>
-            <h2>Start Small</h2>
-            <ul>
-                <li class="fragment"><h4>Agile, small, focused, good communicators</h4></li>
-                <li class="fragment"><h4>2 - 6 high quality people</h4></li>
-                <li class="fragment"><h4>pragmatic, generalists, creative</h4></li>
-                <li class="fragment"><h4>deep business domain knowledge essential</h4></li>
-                <li class="fragment"><h4>These people are hard to find - pay them well</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/1927SolvayColour.jpg" data-state="dim">
+                <h1>Requirement 3</h1>
+                <h2>Start Small</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Agile, small, focused, good communicators</h4></li>
+                    <li class="fragment">
+                        <h4>2 - 6 high quality people</h4></li>
+                    <li class="fragment">
+                        <h4>pragmatic, generalists, creative</h4></li>
+                    <li class="fragment">
+                        <h4>deep business domain knowledge essential</h4></li>
+                    <li class="fragment">
+                        <h4>These people are hard to find - pay them well</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/1927SolvayColour.jpg" data-state="dim">
-            <h1>Anti-patterns</h1>
-            <h2>This actually happens</h2>
-            <ul>
-                <li class="fragment"><h4>I need to hire 50 data scientists now!</h4></li>
-                <li class="fragment"><h4>Wait for a year - you have spent $1,000,000</h4></li>
-                <li class="fragment"><h4>I call this "The Walking Dead"</h4></li>
-                <li class="fragment"><h4>Initally hire weak or substandard - get what you pay for</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/1927SolvayColour.jpg" data-state="dim">
+                <h1>Anti-patterns</h1>
+                <h2>This actually happens</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>I need to hire 50 data scientists now!</h4></li>
+                    <li class="fragment">
+                        <h4>Wait for a year - you have spent $1,000,000</h4></li>
+                    <li class="fragment">
+                        <h4>I call this "The Walking Dead"</h4></li>
+                    <li class="fragment">
+                        <h4>Initally hire weak or substandard - get what you pay for</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/tools.jpg" data-state="extradim">
-            <h1>Requirement 4</h1>
-            <h2>Use the best tools - FOSS</h2>
-            <ul>
-                <li class="fragment"><h4>Still an issue with companies</h4></li>
-                <li class="fragment"><h4>The ability to easily try new tools is important</h4></li>
-                <li class="fragment"><h4>Fight hard for this</h4></li>
-                <li class="fragment"><h4>Write a "Manifesto" - fait accompli</h4></li>
-                <li class="fragment"><h4>Corollary - Benovelent IT</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/tools.jpg" data-state="extradim">
+                <h1>Requirement 4</h1>
+                <h2>Use the best tools - FOSS</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Still an issue with companies</h4></li>
+                    <li class="fragment">
+                        <h4>The ability to easily try new tools is important</h4></li>
+                    <li class="fragment">
+                        <h4>Fight hard for this</h4></li>
+                    <li class="fragment">
+                        <h4>Write a "Manifesto" - fait accompli</h4></li>
+                    <li class="fragment">
+                        <h4>Corollary - Benovelent IT</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/tools.jpg" data-state="extradim">
-            <h1>Anti-patterns</h1>
-            <h2>We've all been here</h2>
-            <ul>
-                <li class="fragment"><h4>Locked down Windows PC</h4></li>
-                <li class="fragment"><h4>Can't install any software</h4></li>
-                <li class="fragment"><h4>takes weeks for IT to do anything</h4></li>
-                <li class="fragment"><h4>Get out now - while you still can</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/tools.jpg" data-state="extradim">
+                <h1>Anti-patterns</h1>
+                <h2>We've all been here</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Locked down Windows PC</h4></li>
+                    <li class="fragment">
+                        <h4>Can't install any software</h4></li>
+                    <li class="fragment">
+                        <h4>takes weeks for IT to do anything</h4></li>
+                    <li class="fragment">
+                        <h4>Get out now - while you still can</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/beakermuppets.jpg" data-state="extradim">
-            <h1>Requirement 5</h1>
-            <h2>Encourage creativity &amp; embrace failure</h2>
-            <ul>
-                <li class="fragment"><h4>Data Science is just that - a science </h4></li>
-                <li class="fragment"><h4>It's highly experimental - fail often, fail fast</h4></li>
-                <li class="fragment"><h4>The best ideas come at weird times</h4></li>
-                <li class="fragment"><h4>Some of the best work we've done was by accident</h4></li>
-                <li class="fragment"><h4>This is really hard for companies - blame management</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/beakermuppets.jpg" data-state="extradim">
+                <h1>Requirement 5</h1>
+                <h2>Encourage creativity &amp; embrace failure</h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Data Science is just that - a science </h4></li>
+                    <li class="fragment">
+                        <h4>It's highly experimental - fail often, fail fast</h4></li>
+                    <li class="fragment">
+                        <h4>The best ideas come at weird times</h4></li>
+                    <li class="fragment">
+                        <h4>Some of the best work we've done was by accident</h4></li>
+                    <li class="fragment">
+                        <h4>This is really hard for companies - blame management</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/beakermuppets.jpg" data-state="extradim">
-            <h1>Anti-patterns</h1>
-            <h2></h2>
-            <ul>
-                <li class="fragment"><h4>Innovation theatre</h4></li>
-                <li class="fragment"><h4>BAU - dressed up as R &amp; D</h4></li>
-                <li class="fragment"><h4>Flogging a dead horse</h4></li>
-                <li class="fragment"><h4>No mechanism for admitting failure</h4></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/beakermuppets.jpg" data-state="extradim">
+                <h1>Anti-patterns</h1>
+                <h2></h2>
+                <ul>
+                    <li class="fragment">
+                        <h4>Innovation theatre</h4></li>
+                    <li class="fragment">
+                        <h4>BAU - dressed up as R &amp; D</h4></li>
+                    <li class="fragment">
+                        <h4>Flogging a dead horse</h4></li>
+                    <li class="fragment">
+                        <h4>No mechanism for admitting failure</h4></li>
+                </ul>
+            </section>
 
-        <section class="center" data-background="assets/img/robots.jpg" data-state="extradim">
-            <h1>Conclusion</h1>
-            <ul>
-                <li class="fragment"><h2>Business driven</h2></li>
-                <li class="fragment"><h2>Strong Corporate Sponsor</h2></li>
-                <li class="fragment"><h2>Start Small</h2></li>
-                <li class="fragment"><h2>Use the best tools - FOSS</h2></li>
-                <li class="fragment"><h2>Allow for &amp; embrace failure</h2></li>
-            </ul>
-        </section>
+            <section class="center" data-background="assets/img/robots.jpg" data-state="extradim">
+                <h1>Conclusion</h1>
+                <ul>
+                    <li class="fragment">
+                        <h2>Business driven</h2></li>
+                    <li class="fragment">
+                        <h2>Strong Corporate Sponsor</h2></li>
+                    <li class="fragment">
+                        <h2>Start Small</h2></li>
+                    <li class="fragment">
+                        <h2>Use the best tools - FOSS</h2></li>
+                    <li class="fragment">
+                        <h2>Allow for &amp; embrace failure</h2></li>
+                </ul>
+            </section>
 
+            <section class="center" data-background="assets/img/city.jpg" data-state="dim">
+                <h1><b>Questions?</b></h1>
+                <p><b>Nah, we're running outta time. Seriously.</b></p>
+                <p><br></p>
+                <p><br></p>
+                <h1><b>Thanks For Listening</b></h1>
+                <p><br></p>
+                <code>https://nltmickc.github.io/dft_datascience/</code>
+            </section>
 
-        <section class="center" data-background="assets/img/city.jpg" data-state="dim">
-            <h1><b>Questions?</b></h1>
-            <p><b>Nah, we're running outta time. Seriously.</b></p>
-            <p><br></p>
-            <p><br></p>
-            <h1><b>Thanks For Listening</b></h1>
-            <p><br></p>
-            <code>https://nltmickc.github.io/dft_datascience/</code>
-        </section>
+        </div>
 
     </div>
 
-</div>
+    <script src="assets/reveal.js/lib/js/head.min.js"></script>
+    <script src="assets/reveal.js/js/reveal.js"></script>
 
-<script src="assets/reveal.js/lib/js/head.min.js"></script>
-<script src="assets/reveal.js/js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            slideNumber: false,
+            hideAddressBar: true,
+            previewLinks: true,
+            showNotes: false,
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+            backgroundTransition: 'default',
 
-<script>
-// Full list of configuration options available at:
-// https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-    controls: true,
-    progress: true,
-    history: true,
-    center: false,
-    slideNumber: false,
-    hideAddressBar: true,
-    previewLinks: true,
-    showNotes: false,
-    transition: 'convex', // none/fade/slide/convex/concave/zoom
-    backgroundTransition: 'default',
+            // The "normal" size of the presentation, aspect ratio will be preserved
+            // when the presentation is scaled to fit different resolutions. Can be
+            // specified using percentage units.
+            width: 1160,
+            height: 720,
 
-    // The "normal" size of the presentation, aspect ratio will be preserved
-    // when the presentation is scaled to fit different resolutions. Can be
-    // specified using percentage units.
-    width: 1160,
-    height: 720,
+            // Factor of the display size that should remain empty around the content
+            margin: 0.1,
 
-    // Factor of the display size that should remain empty around the content
-    margin: 0.1,
+            // Bounds for smallest/largest possible scale to apply to content
+            minScale: 0.2,
+            maxScale: 1.5,
 
-    // Bounds for smallest/largest possible scale to apply to content
-    minScale: 0.2,
-    maxScale: 1.5,
-
-    // Optional reveal.js plugins
-    dependencies: [
-        {
-            src: 'assets/reveal.js/lib/js/classList.js',
-            condition: function () {
-                return !document.body.classList;
-            }
-        },
-        {
-            src: 'assets/reveal.js/plugin/markdown/marked.js',
-            condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-        },
-        {
-            src: 'assets/reveal.js/plugin/markdown/markdown.js',
-            condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
-        },
-        {
-            src: 'assets/reveal.js/plugin/highlight/highlight.js',
-            async: true,
-            callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
-        },
-        {
-            src: 'assets/reveal.js/plugin/zoom-js/zoom.js',
-            async: true
-        },
-        {
-            src: 'assets/reveal.js/plugin/notes/notes.js',
-            async: true
-        }
-	]
-});
-</script>
+            // Optional reveal.js plugins
+            dependencies: [{
+                    src: 'assets/reveal.js/lib/js/classList.js',
+                    condition: function() {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'assets/reveal.js/plugin/markdown/marked.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'assets/reveal.js/plugin/markdown/markdown.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'assets/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'assets/reveal.js/plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: 'assets/reveal.js/plugin/notes/notes.js',
+                    async: true
+                }
+            ]
+        });
+    </script>
 </body>
+
 </html>
